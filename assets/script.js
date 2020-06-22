@@ -26,4 +26,13 @@ function generatePassword() {
     window.alert("Password length is invalid. Please, try again.");
     var passwordLength = window.prompt("Enter a password length between 8 and 128.");
   }
+  // Prompt to determine if lower case characters will be used
+  var confirmLowerCase = window.confirm("Would you like to include lower case characters in your password?");
+  // Prompt to determine if upper case characters will be used
+  var confirmUpperCase = window.confirm("Would you like to include upper case characters in your password?");
+  // Prompt to determine if special characters will be used
+  var confirmSpecialCharacters = window.confirm("Would you like to include special characters in your password?");
+  // Prompt to determine if numbers will be used
+  var confirmNumbers = window.confirm("Would you like to include numbers in your password?")
+  // Loop that forces at least one parameter to be used so that a password can actually be generated
 }
