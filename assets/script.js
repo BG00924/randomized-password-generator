@@ -44,4 +44,21 @@ function generatePassword() {
     var confirmSpecialCharacters = window.confirm("Would you like to include special characters in your password?");
     var confirmNumbers = window.confirm("Would you like to include numbers in your password?")
   }
+  // Array created by merging critera arrays
+  var passwordChars = []
+    // conditional statements that merge criteria arrays into a single array in order to generate the password
+    if (confirmLowerCase) {
+      passwordChars = passwordChars.concat(lowerCase);
+    };
+    if (confirmUpperCase) {
+      passwordChars = passwordChars.concat(upperCase);
+    };
+    if (confirmSpecialCharacters) {
+      passwordChars = passwordChars.concat(specialCharacters);
+    };
+    if (confirmNumbers) {
+      passwordChars = passwordChars.concat(number);
+    }
+    console.log(passwordChars);
+
 }
