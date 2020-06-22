@@ -17,6 +17,8 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "=", "<", ">", "?","~", "@"];
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+
+
 // Function to generate password
 function generatePassword() {
   // Prompt to set length of desired password
@@ -35,4 +37,11 @@ function generatePassword() {
   // Prompt to determine if numbers will be used
   var confirmNumbers = window.confirm("Would you like to include numbers in your password?")
   // Loop that forces at least one parameter to be used so that a password can actually be generated
+  while(confirmLowerCase === false && confirmUpperCase === false && confirmSpecialCharacters === false && confirmNumbers === false) {
+    window.alert("Choose one or more criteria in order to generate a password.");
+    var confirmLowerCase = window.confirm("Would you like to include lower case characters in your password?");
+    var confirmUpperCase = window.confirm("Would you like to include upper case characters in your password?");
+    var confirmSpecialCharacters = window.confirm("Would you like to include special characters in your password?");
+    var confirmNumbers = window.confirm("Would you like to include numbers in your password?")
+  }
 }
